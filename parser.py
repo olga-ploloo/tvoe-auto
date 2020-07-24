@@ -12,8 +12,8 @@ def get_html(url, params=None):
 
 def get_content(html):
     soup = BeautifulSoup(html, 'html.parser')
-    items = soup.find_all('div', class_='vehicle-form__offers-flex')
-    print(items)
+    #items = soup.find_all('div', class_='vehicle-form__offers-flex')
+    #print(items)
 
 def parse():
     html = get_html(URL)
