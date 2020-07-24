@@ -13,16 +13,17 @@ def main():
     bt_elem_text = []
     for elem in bt_elem:
         elem = elem.text
-        bt_elem_text.append(elem.replace('\n', ':'))
+        bt_elem_text.append(elem.split('\n'))
     #bt_data = bt_elem.text
 
-    myFile = open('csv0.csv', 'w')
-    with myFile:
-        writer = csv.writer(myFile)
-        for row in bt_elem_text:
-            line = row.split(',')
-            writer.writerow(line)
-            print(line)
+    with open('csv0.csv', 'w') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([i[0] for i in bt_elem_text])
+        writer.writerow([i[1] for i in bt_elem_text])
+    #for row in bt_elem_text:
+            #line = row.split(',')
+            #writer.writerow(line)
+            #print(line)
         #writer.writerow(cash_elem.text)
         #writer.writerow(bt_data)
 
