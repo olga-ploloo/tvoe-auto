@@ -1,2 +1,23 @@
 Год выпуска,Пробег,Кузов,Цвет,Двигатель,Мощность,Коробка,Привод,Состояние,Растаможен
 2012,155 000 км,Хетчбэк,Белый,1.8 л / Бензин,180 л.с. / 250 Нм,Автоматическая,Передний,С пробегом,Да
+
+    class Door(models.IntegerChoices):
+        TWO = 2
+        THREE = 3
+        FOUR = 4
+        FIVE = 5
+        SIX = 6
+
+    class Seat(models.IntegerChoices):
+        ONE = 1
+        TWO = 2
+        THREE = 3
+        FOUR = 4
+        FIVE = 5
+        SIX = 6
+        SEVEN = 7
+        EIGHT = 8
+        NINE = 9
+        TEN = 10
+        ELEVEN = 11
+        TWELWE = 12
